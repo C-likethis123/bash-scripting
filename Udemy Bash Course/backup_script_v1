@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Author: Chow Jia Ying <chowjiaying211@gmail.com>
+# Date created: 10 Dec 2022
+# Last modified: 10 Dec 2022
+# Description: Backs up all files in your home directory and saves them in a .tar archive
+# Usage: `./backup_script`
+
+if [ ! -d ~/bash_course ]; then
+  mkdir ~/bash_course
+fi
+
+cd ~/bash_course
+
+echo "Hello ${USER^}, I will back up your home directory, $HOME"
+
+tar -cvf ~/bash_course/"$(date +%d-%m-%Y_%H_%M-%S)".tar ~/* 2>/dev/null
+
+echo "Backup completed successfully, exiting..."
+exit 0
