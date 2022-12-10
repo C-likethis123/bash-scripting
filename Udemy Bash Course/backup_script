@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Author: Chow Jia Ying <chowjiaying211@gmail.com>
+# Date created: 10 Dec 2022
+# Last modified: 10 Dec 2022
+# Description: Backs up all files in your home directory and saves them in a .tar archive
+# Usage: `./backup_script`
+
+tar -cvf ~/Github/bash-exercism/Udemy\ Bash\ Course/"$(date +%d-%m-%Y_%H_%M-%S)".tar ~/* 2>/dev/null
+
+exit 0
