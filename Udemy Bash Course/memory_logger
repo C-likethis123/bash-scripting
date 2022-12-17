@@ -1,0 +1,15 @@
+#!/usr/local/bin/bash
+
+# Author: Chow Jia Ying <chowjiaying211@gmail.com>
+# Date created: 17 Dec 2022
+# Last modified: 17 Dec 2022
+# Description: Logs memory usage of server
+# Usage: `./memory_logger `
+
+if [ ! -d "$HOME/performance" ]; then
+  mkdir "$HOME/performance"
+fi
+
+free >> "$HOME/performance/memory.log"
+
+exit 0
