@@ -1,0 +1,18 @@
+#!/usr/local/bin/bash
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $0 [filename]"
+  exit 1
+fi
+
+echo "!/usr/local/bin/bash" > "$1"
+echo "" >> "$1"
+
+CURRDATE="$( date '+%d %b %Y' )" 
+echo "# Author: Chow Jia Ying <chowjiaying211@gmail.com>" >> "$1"
+echo "# Date created: $CURRDATE"  >> "$1"
+echo "# Last modified: $CURRDATE" >> "$1"
+echo "# Description: " >> "$1"
+echo "# Usage: \`./${1} \`" >> "$1"
+
+exit 0
