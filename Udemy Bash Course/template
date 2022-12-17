@@ -5,7 +5,7 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
-echo "!/usr/local/bin/bash" > "$1"
+echo "#!/usr/local/bin/bash" > "$1"
 echo "" >> "$1"
 
 CURRDATE="$( date '+%d %b %Y' )" 
@@ -15,4 +15,6 @@ echo "# Last modified: $CURRDATE" >> "$1"
 echo "# Description: " >> "$1"
 echo "# Usage: \`./${1} \`" >> "$1"
 
-exit 0
+echo "$1 created, opening file..."
+
+vim -o "$1"

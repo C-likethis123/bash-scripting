@@ -1,0 +1,22 @@
+#!/usr/local/bin/bash
+
+# Author: Chow Jia Ying <chowjiaying211@gmail.com>
+# Date created: 17 Dec 2022
+# Last modified: 17 Dec 2022
+# Description: A script which collects extension numbers and pin codes
+# Usage: `./get_extensions`
+
+read -p "What is your first name?" name
+echo
+
+read -p "What is your surname?" surname
+echo
+
+read -N 4 -p "What is your extension number (exactly 4 letters)?" ext
+echo
+
+read -s -N 4 -p "What access code would you like to use when dialing in (exactly 4 letters)?" code
+
+echo "$name,$surname,$ext,$code" >>  extensions.csv
+
+exit 0

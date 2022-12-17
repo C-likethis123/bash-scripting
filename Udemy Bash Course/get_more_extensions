@@ -1,0 +1,30 @@
+#!/usr/local/bin/bash
+
+# Author: Chow Jia Ying <chowjiaying211@gmail.com>
+# Date created: 17 Dec 2022
+# Last modified: 17 Dec 2022
+# Description: Builds on get_extension script 
+# Usage: `./get_more_extensions`
+
+read -p "What is your first name? " firstname 
+read -p "What is your last name? " lastname
+
+PS3="What phone do you have?"
+select PHONE in headset handheld;
+do
+  echo $PHONE
+  break
+done
+
+
+PS3="What is your department?"
+select DEPARTMENT in finance sales "customer service" engineering;
+do
+  echo $DEPARTMENT
+  break
+done
+
+read -N 4 -p "What is your extension?" ext
+read -N 4 -p "What access code would you like to use?" code 
+
+echo "$firstname,$lastname,$PHONE,$DEPARTMENT,$ext,$access" >> extensions.csv
