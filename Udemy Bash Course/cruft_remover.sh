@@ -13,3 +13,4 @@ readarray -t files < <(find "$folder" -type f -mtime "$days")
 for file in "${files[@]}"; do
   rm -i "$file"
 done
+exit 0

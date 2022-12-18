@@ -19,3 +19,4 @@ while read line; do
     *) echo "${line@Q}" ;;
   esac
 done < <(ls )
+exit 0
