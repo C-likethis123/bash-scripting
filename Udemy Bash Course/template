@@ -15,6 +15,9 @@ echo "# Last modified: $CURRDATE" >> "$1"
 echo "# Description: " >> "$1"
 echo "# Usage: \`./${1} \`" >> "$1"
 
+echo
+echo "exit 0" >> "$1"
+
 touch "$1"
 chmod 744 "$1"
 echo "$1 created, opening file..."
